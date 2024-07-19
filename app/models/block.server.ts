@@ -2,11 +2,18 @@ import { Block } from '@prisma/client';
 
 import { prisma } from '~/db.server';
 
+// create
+// update
+// delete
+// get by id
+// get all
+// get count
+
 export function createBlock({
     content,
     type,
     order
-}: Pick<Block, 'type' | 'order'> & { content: object }) {
+}: Pick<Block, 'type' | 'order'> & { content: string }) {
     return prisma.block.create({
         data: {
             content,
